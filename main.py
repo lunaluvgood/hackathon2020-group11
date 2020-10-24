@@ -1,4 +1,5 @@
 import random
+from tabulate import tabulate
 
 
 def rebuildQuestionList():
@@ -320,6 +321,88 @@ def GPACalculator():
         GPACalculator()
     home()
 
+def create_schedule():
+    print("Create the schedule (If you don't have classes on the period put no)")
+    first = input("Write 1st period subject: ")
+    second = input("Write 2nd period subject: ")
+    third = input("Write 3rd period subject: ")
+    fourth = input("Write 4th period subject: ")
+    fifth = input("Write 5th period subject: ")
+    sixth = input("Write 6th period subject: ")
+    seventh = input("Write 7th period subject: ")
+    if first == "no":
+        first = "Off period"
+    if second == "no":
+        second = "Off period"
+    if third == "no":
+        third = "Off period"
+    if fourth == "no":
+        fourth = "Off period"
+    if fifth == "no":
+        fifth = "Off period"
+    if sixth == "no":
+        sixth = "Off period"
+    if seventh == "no":
+        seventh = "Off period"
+    print("Put your teachers name (If you don't have classes on the period leave it empty )")
+    firstT = input("Write 1st period teacher: ")
+    secondT = input("Write 2nd period teacher: ")
+    thirdT = input("Write 3rd period teacher: ")
+    fourthT = input("Write 4th period teacher: ")
+    fifthT = input("Write 5th period teacher: ")
+    sixthT = input("Write 6th period teacher: ")
+    seventhT = input("Write 7th period teacher: ")
+
+    tableO = [["7:40~ 8:50", first, firstT]]
+    tableO += [["8:50~ 9:00", "Break", ""]]
+    tableO += [["9:00~ 10:10", third, thirdT]]
+    tableO += [["10:10~ 10:40", "Tutorial", ""]]
+    tableO += [["10:40~ 10:50", "Break", ""]]
+    tableO += [["10:50~ 12:00", fifth, fifthT]]
+    tableO += [["12:00~ 1:00", "Lunch", ""]]
+    tableO += [["1:00~ 2:10", seventh, seventhT]]
+    tableO += [["2:10~ 2:40", "Tutorial", ""]]
+
+    Odd = (tabulate(tableO, headers=["Time", "Subject", "Teacher"]))
+    text_file = open("Odd.txt", "w")
+    text_file.write(Odd)
+    text_file.close()
+
+    tableE = [["7:40~ 8:50", "", ""]]
+    tableE += [["8:50~ 9:00", "Break", ""]]
+    tableE += [["9:00~ 10:10", second, secondT]]
+    tableE += [["10:10~ 10:40", "Tutorial", ""]]
+    tableE += [["10:40~ 10:50", "Break", ""]]
+    tableE += [["10:50~ 12:00", fourth, fourthT]]
+    tableE += [["12:00~ 1:00", "Lunch", ""]]
+    tableE += [["1:00~ 2:10", sixth, sixthT]]
+    tableE += [["2:10~ 2:40", "Tutorial", ""]]
+    Even = (tabulate(tableE, headers=["Time", "Subject", "Teacher"]))
+    text_file = open("Even.txt", "w")
+    text_file.write(Even)
+    text_file.close()
+    home()
+
+
+def schedule():
+    print("What day is today?")
+    day = input()
+    if day == "Monday" or day == "Thursday":
+        print("")
+        text_file = open("Odd.txt", "r")
+        for line in text_file:
+            print(line)
+    elif day == "Tuesday" or day == "Friday":
+        print("")
+        text_file = open("Even.txt", "r")
+        for line in text_file:
+            print(line)
+    elif day == "Wednesday":
+        print("Today is Wednesday!! You only have advisory")
+    else:
+        print("error")
+    home()
+
 
 def home():
     print("Enter the number before the task to select that task")
@@ -374,6 +457,5 @@ def home():
             home()
     elif wantToDo == "4":
         quit
-
 
 home()
