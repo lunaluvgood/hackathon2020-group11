@@ -321,6 +321,7 @@ def GPACalculator():
         GPACalculator()
     home()
 
+
 def create_schedule():
     print("Create the schedule (If you don't have classes on the period put no)")
     first = input("Write 1st period subject: ")
@@ -405,7 +406,7 @@ def schedule():
 
 
 def home():
-    print("Enter the number before the task to select that task")
+    print("\nEnter the number before the task to select that task")
     print("1. Make/Access a Study Quiz")
     print("2. Make/Access a list of assignments")
     print("3. Calculate your GPA")
@@ -430,7 +431,8 @@ def home():
         print("2. Clear your list")
         print("3. Delete an item from your list")
         print("4. Edit an item to your list")
-        print("5. Go Back")
+        print("5. Sort list by importance")
+        print("6. Go Back")
         wantToDo = input("What would you like to do? ")
         if wantToDo == "1":
             todo()
@@ -441,6 +443,8 @@ def home():
         elif wantToDo == "4":
             edit_item()
         elif wantToDo == "5":
+            sort()
+        elif wantToDo == "6":
             home()
         else:
             print("Invalid Input. Try again")
@@ -474,5 +478,6 @@ def home():
         quit
     else:
         home()
+
 
 home()
