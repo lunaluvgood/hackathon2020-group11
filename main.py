@@ -385,7 +385,7 @@ def create_schedule():
 
 
 def schedule():
-    print("What day is today?")
+    print("What day is it today?")
     day = input()
     if day == "Monday" or day == "Thursday":
         print("")
@@ -406,10 +406,11 @@ def schedule():
 
 def home():
     print("Enter the number before the task to select that task")
-    print("1. Make a Study Quiz")
-    print("2. Make a list of assignments")
+    print("1. Make/Access a Study Quiz")
+    print("2. Make/Access a list of assignments")
     print("3. Calculate your GPA")
-    print("4. Quit")
+    print("4. Make/Access a schedule")
+    print("5. Quit")
     wantToDo = input("What would you like to do? ")
     if wantToDo == "1":
         print("1. Create a new test")
@@ -456,6 +457,22 @@ def home():
             print("Invalid response. Try again")
             home()
     elif wantToDo == "4":
+        print("1. Create Schedule")
+        print("2. Access Schedule")
+        print("3. Go back")
+        wantToDo = input("What would you like to do? ")
+        if wantToDo == "1":
+            create_schedule()
+        elif wantToDo == "2":
+            schedule()
+        elif wantToDo == "3":
+            home()
+        else:
+            print("Invalid response. Try again")
+            home()
+    elif wantToDo == "5":
         quit
+    else:
+        home()
 
 home()
