@@ -16,7 +16,7 @@ When the program is initially run you are met with a menu of options. Going thro
 ### Technology
 
 - This project was coded in Python 3
-- External libraries used: [tabulate](https://pypi.org/project/tabulate/)
+- External libraries used: [tabulate](https://pypi.org/project/tabulate/), random
 
 
 ### File Structure
