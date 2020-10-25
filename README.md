@@ -21,6 +21,7 @@ When the program is initially run you are met with a menu of options. Going thro
 
 ### File Structure
 - 1 main file
+- a python file for the tabulate library
 - 1 txt file for the to-do list
 - a folder with a file for each flash card set
 - a file for each day of schedule
