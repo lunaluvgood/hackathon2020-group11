@@ -33,6 +33,11 @@ Run main.py in Python 3
 
 # Other
 
+## Future imporvements
+
+- Fix known issues.
+- Provide a better visual experience (provide a UI insted of a command line).
+
 ## Issues
 
 Creating a new study set with an already existing name overwrites the already existing set.
