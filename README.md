@@ -1,4 +1,4 @@
-# hackathon2020-group11
+# Study Organizer
 
 ## Team members:
 Ryoto Kato, Aaditya Rajvanshi, Nikola Paunovic
@@ -26,7 +26,7 @@ When the program is initially run you are met with a menu of options. Going thro
 - a file for each day of schedule
 
 ### Problems
-TODO
+Coding different parts on different computers and then combining them was challenging at times, but we managed to update the code to work together.
 
 ### Running the Project
 Run main.py in Python 3
