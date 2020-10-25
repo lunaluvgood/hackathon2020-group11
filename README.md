@@ -36,3 +36,6 @@ Run main.py in Python 3
 ## Issues
 
 Creating a new study set with an already existing name overwrites the already existing set.
+
+## Additional Info
+Not all aspects covered in demo video due to the time limit.
